@@ -1,0 +1,13 @@
+#!/bin/bash
+
+### Start Gorilla 1366x768
+
+killall conky
+
+sleep 1s
+
+conky -c  $HOME/Projects/conky-tukde-tukde/configs/conky.conf_00
+conky -c  $HOME/Projects/conky-tukde-tukde/configs/conky.conf_01
+conky -c  $HOME/Projects/conky-tukde-tukde/configs/conky.conf_02
+conky -c  $HOME/Projects/conky-tukde-tukde/configs/conky.conf_03
+conky -c  $HOME/Projects/conky-tukde-tukde/configs/conky.conf_04

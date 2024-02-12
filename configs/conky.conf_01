@@ -1,0 +1,64 @@
+-- Config_Settings: http://conky.sourceforge.net/config_settings.html
+-- Config_Variables: http://conky.sourceforge.net/variables.html
+
+
+conky.config = {
+
+  -- Conky --
+
+  xinerama_head = 1,
+  background = true,
+  update_interval = 1,
+  total_run_times = 0,  
+  cpu_avg_samples = 4,
+  net_avg_samples = 2,  
+  override_utf8_locale = true,  
+  double_buffer = true,
+  no_buffers = true,
+  imlib_cache_size=0,  
+  text_buffer_size = 256,
+
+  -- Window --
+
+  own_window = true,
+  own_window_colour = '000000',
+  own_window_class = 'Conky',
+  own_window_argb_visual = true,
+  own_window_argb_count = 0,
+  own_window_argb_value = 195,
+  own_window_type = 'normal',
+  own_window_transparent = false,
+  own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+  alignment = 'top_left',
+  gap_x = 90,
+  gap_y = 390,
+  minimum_width = 200,
+  maximum_width = 200,
+  border_inner_margin = 20,
+  border_outer_margin = 0,
+
+  -- Graphics -- 
+
+  draw_shades = false,
+  draw_outline = false,
+  draw_borders = false,
+  draw_graph_borders = false,
+  
+  -- Text --
+
+  use_xft = true,
+  xftalpha = 1,
+  uppercase = false,
+  pad_percents = 0,
+
+};
+
+conky.text = [[
+#				-- CPU --
+#${color 03b0d2}${font Abnes:bold:size= 8}${exec lscpu | grep "Model name" | cut -c "15-90" | tr -d '  '}${font Abnes:size= 10}${alignr}$cpu %
+#${font Abnes:size= 10}$cpu % ${font Abnes:bold:size= 10}${alignr}${execi 2 sensors | grep 'id 0'| cut -c17-18}${font Abnes:bold:size= 10}   °${font Abnes:bold:size= 10}C
+${color 03b0d2}${alignr}${font Abnes:bold:size= 10}${cpu} % / ${acpitemp}${font Arial:bold:size= 10}   °${font Abnes:bold:size= 10}C
+${color 03b0d2}${alignr}${font Abnes:size= 10} CPU
+#${color e95420}${font Abnes:bold:size= 10}  Core I  ${cpugraph cpu1 30, 76 222222 e95420}${color e95420} Core III ${cpugraph cpu3 30, 73 222222 e95420}
+#${color 03b0d2}  Core II  ${cpugraph cpu2 30, 73 222222 039fab}${color 03b0d2} Core IV ${cpugraph cpu4 30, 66 222222 039fab}
+]];

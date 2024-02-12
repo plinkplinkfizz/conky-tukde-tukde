@@ -1,0 +1,71 @@
+-- Config_Settings: http://conky.sourceforge.net/config_settings.html
+-- Config_Variables: http://conky.sourceforge.net/variables.html
+
+
+conky.config = {
+
+  -- Conky --
+
+  xinerama_head = 1,
+  background = true,
+  update_interval = 1,
+  total_run_times = 0,  
+  cpu_avg_samples = 4,
+  net_avg_samples = 2,  
+  override_utf8_locale = true,  
+  double_buffer = true,
+  no_buffers = true,
+  imlib_cache_size=0,  
+  text_buffer_size = 256,
+
+  -- Window --
+
+  own_window = true,
+  own_window_colour = '000000',
+  own_window_class = 'Conky',
+  own_window_argb_visual = true,
+  own_window_argb_count = 0,
+  own_window_argb_value = 195,
+  own_window_type = 'normal',
+  own_window_transparent = false,
+  own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+  alignment = 'top_left',
+  gap_x = 90,
+  gap_y = 90,
+  minimum_width = 545,
+  maximum_width = 545,
+  border_inner_margin = 20,
+  border_outer_margin = 0,
+
+  -- Graphics -- 
+
+  draw_shades = false,
+  draw_outline = false,
+  draw_borders = false,
+  draw_graph_borders = false,
+  
+  -- Text --
+
+  use_xft = true,
+  xftalpha = 1,
+  uppercase = false,
+  pad_percents = 0,
+
+};
+
+conky.text = [[
+#				-- CLOCK --
+${color e95420}${font  Abnes:bold:size= 12}${alignr}${time %A, %d %B}
+
+${color e95420}${font Abnes:bold:size= 38}${alignr}${time %H:%M}
+#				-- HEADER --
+${color 03b0d2}${font Abnes:bold:size= 10}${alignr}$nodename
+
+${alignr}$uptime
+
+${color e95420}${font Abnes:bold:size= 10}${alignr}${exec hostnamectl | grep System | cut -c 19-30}
+
+${alignr}${exec hostnamectl | grep Kernel | cut -c 18-40}
+${alignr}${exec hostnamectl | grep Architecture | cut  -c 18-40}
+${image ~/Projects/conky-tukde-tukde/configs/Icons/pngwing.com.png -p 2, 30 -s 200x200}
+]];
