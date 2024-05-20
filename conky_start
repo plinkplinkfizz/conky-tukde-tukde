@@ -4,7 +4,7 @@
 
 killall conky
 
-sleep 1s
+sleep 15s
 
 conky -c  $HOME/Projects/conky-tukde-tukde/configs/conky.conf_00
 conky -c  $HOME/Projects/conky-tukde-tukde/configs/conky.conf_01

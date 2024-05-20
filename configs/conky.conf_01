@@ -31,9 +31,9 @@ conky.config = {
   own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
   alignment = 'top_left',
   gap_x = 90,
-  gap_y = 390,
-  minimum_width = 200,
-  maximum_width = 200,
+  gap_y = 520,
+  minimum_width = 500,
+  maximum_width = 500,
   border_inner_margin = 20,
   border_outer_margin = 0,
 
