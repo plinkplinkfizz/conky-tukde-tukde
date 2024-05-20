@@ -57,5 +57,5 @@ conky.text = [[
 #				-- RAM --
 ${color e95420}${font Abnes:bold:size= 10}${alignr}$mem / $memmax
 #${color e95420}${font Abnes:bold:size= 8} Swap${font Abnes:size= 8}${alignr}$swap
-${memgraph 70,235 222222 e95420 -t -l}
+${memgraph 70,400 222222 e95420 -t -l}
 ]];

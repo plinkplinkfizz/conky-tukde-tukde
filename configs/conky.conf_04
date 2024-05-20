@@ -57,6 +57,6 @@ conky.text = [[
 #				-- NETWORK --
 ${color e95420}${font Abnes:size= 10} Local${alignr}${font Abnes:bold:size= 10}${addr enp6s0}
 ${color e95420}${font Abnes:size= 10} Tailnet${alignr}${font Abnes:bold:size= 10}${addr tailscale0}
-${downspeedgraph enp6s0 70,535 222222 e95420 -t -l}
+${downspeedgraph enp6s0 70,835 222222 e95420 -t -l}
 ${font Arial:size= 10}▲ ${font Abnes:size= 10}${upspeed enp6s0}${alignr}${font Arial:size= 10} ▼ ${font Abnes:size= 10}${downspeed enp6s0}
 ]];

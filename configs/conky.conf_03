@@ -56,5 +56,5 @@ conky.config = {
 conky.text = [[
 #				-- HD --
 ${color 03b0d2}${font Abnes:size= 10} SSD${font Abnes:bold:size= 10}${alignr}${diskio}
-${diskiograph 70,235 222222 039fab -t -l}
+${diskiograph 70,400 222222 039fab -t -l}
 ]];
